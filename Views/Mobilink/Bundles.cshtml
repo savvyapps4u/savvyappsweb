@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "Bundles";
+}
+
+@{
+    Layout = "~/Views/Shared/layout.cshtml";
+}
+
+@model List<SavyMobileSS.Models.Package>
+
+ 
+
+
+
+
+    <div class="col-md-12 " >
+         <br />
+    <div class="btn btn-warning col-md-offset-5 col-md-3 text-center "> <h3 class="tables_font">Mobilink Bundles</h3></div>
+       
+      <div class="table-responsive col-md-offset-0 col-md-12 text-center">  
+          <br />        
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Details</th>
+        <th>Sub Code</th>
+        <th>UnSub Code</th>
+        <th>Sub Msg</th>
+        <th>UnSub Msg</th>
+        <th>Charges</th>
+        <th>Validity</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+  </thead>
+ <tbody>
+
+      @foreach(var x in Model)
+       {
+        <tr>
+        <td class="tables_font">@x.PackageName</td>
+        <td class="tables_font">@x.Package_Details</td>
+        <td class="tables_font">@x.PackageSubCode</td>
+        <td class="tables_font">@x.PackageUnSubCode</td>
+        <td class="tables_font">@x.PackageSubMsg</td>
+        <td class="tables_font">@x.PackageUnSubMsg</td>
+        <td class="tables_font">@x.Package_Charges</td>
+        <td class="tables_font">@x.Validity</td>
+        <td><a class="btn btn-success btn-block tables_font" href="~/Home/EditPackage/@x.Id">Edit</a></td>
+        <td><a class="btn btn-warning btn-block tables_font" href="~/Home/DeletePackage/@x.Id">Delete</a></td>
+      </tr>
+      }
+     
+    </tbody>
+  </table>
+  </div>
+         <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="row"></div>
+ </div>
+ 

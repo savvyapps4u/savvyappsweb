@@ -1,0 +1,115 @@
+﻿@{
+    ViewBag.Title = "Edit";
+}
+
+@{
+    Layout = "~/Views/Shared/layout.cshtml";
+}
+
+@model SavyMobileSS.Models.Package
+
+<div class="col-md-offset-2 col-md-8">
+    <form id="mf" class="form  text-center" method="post" action="/Home/ConfirmEdit" style="margin-left: 100px;">
+
+        <div class="alert alert-success fade in col-md-offset-2 col-md-6 text-center"  id="successDiv">
+            <strong>Editing!</strong> you are updating...
+         </div>
+        <div class="form-group">
+                @Html.TextBoxFor(x => x.Id, new {@class="form-control input-lg",@required="required", type="hidden",placeholder="Package Name",@value=@Model.Id})
+           </div>
+        <div class="col-xs-10">
+            <div class="form-group">
+                @Html.TextBoxFor(x => x.PackageName, new {@class="form-control input-lg",@required="required",placeholder="Package Name",@value=@Model.PackageName})
+           </div>
+
+        </div>
+
+
+
+        <div class="col-xs-5">
+            <div class="form-group">
+                 @Html.TextBoxFor(x => x.PackageSubCode, new {@class="form-control input-lg",@required="required",placeholder="Sub Code",@value=@Model.PackageSubCode})
+
+            </div>
+        </div>
+
+        <div class="col-xs-5">
+            <div class="form-group">
+                 @Html.TextBoxFor(x => x.PackageUnSubCode, new {@class="form-control input-lg",@required="required",placeholder="UnSub Code",@value=@Model.PackageUnSubCode})
+
+            </div>
+        </div>
+
+        <div class="col-xs-5">
+            <div class="form-group">
+                 @Html.TextBoxFor(x => x.PackageSubMsg, new {@class="form-control input-lg",@required="required",placeholder="Sub Msg",@value=@Model.PackageSubMsg})
+
+            </div>
+        </div>
+        <div class="col-xs-5">
+            <div class="form-group">
+                @Html.TextBoxFor(x => x.PackageUnSubMsg, new {@class="form-control input-lg",@required="required",placeholder="UnSub Msg",@value=@Model.PackageUnSubMsg})
+
+            </div>
+        </div>
+        <div class="col-xs-5">
+            <div class="form-group">
+                @Html.DropDownListFor(x=>x.Network, new List<SelectListItem>
+                                    {
+                                         new SelectListItem{ Text=@Model.Network, Value = @Model.Network , Selected=true},
+                                         new SelectListItem{ Text="Mobilink", Value = "mobilink" }, 
+                                             new SelectListItem{ Text="Ufone", Value = "ufone" },
+                                            new SelectListItem{ Text="Warid", Value = "warid" },
+                                             new SelectListItem{ Text="Telenor", Value = "telenor" },
+                                              new SelectListItem{ Text="Zong", Value = "zong" }
+                                     } ,new {@class="form-control input-lg"})
+            </div>
+        </div>
+
+        <div class="col-xs-5">
+            <div class="form-group">
+               @Html.DropDownListFor(x=>x.PackageCategory, new List<SelectListItem>
+                                    {
+                                         new SelectListItem{ Text=@Model.PackageCategory, Value = @Model.PackageCategory , Selected=true},
+                                         new SelectListItem{ Text="Call", Value = "call" }, 
+                                             new SelectListItem{ Text="SMS", Value = "sms" },
+                                            new SelectListItem{ Text="Hybrid", Value = "hybrid" },
+                                             new SelectListItem{ Text="International", Value = "international" },
+                                              new SelectListItem{ Text="Internet", Value = "internet" }
+                                     } ,new {@class="form-control input-lg"})
+            </div>
+        </div>
+        <div class="col-xs-5">
+            <div class="form-group">
+                 @Html.TextBoxFor(x => x.Validity, new {@class="form-control input-lg",@required="required",placeholder="Validity",@value=@Model.Validity})
+
+            </div>
+        </div>
+        <div class="col-xs-5">
+            <div class="form-group">
+                 @Html.TextBoxFor(x => x.Package_Charges, new {@class="form-control input-lg",@required="required",placeholder="Charges",@value=@Model.Package_Charges})
+
+            </div>
+        </div>
+        <div class="col-xs-10">
+            <div class="form-group">
+               @Html.TextAreaFor(x => x.Package_Details, new {@class="form-control input-lg",@required="required",placeholder="Details",@value=@Model.Package_Details})
+            </div>
+        </div>
+        <div class="form-group">
+        </div>
+        <div class="form-group">
+        </div>
+
+         <div class="col-md-offset-3 col-md-4">
+
+        <div class="form-group text-center">
+
+            <button class="btn btn-success btn-block" id="bSave" name="bSave">UPDATE</button>
+
+        </div>
+    </div>
+    </form>
+   
+
+</div>

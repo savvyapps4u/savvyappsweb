@@ -1,0 +1,104 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+   
+     <script src="~/Scripts/jqueryfile.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <link href="~/Contents/bootstrap.css" rel="stylesheet" />
+    <link href="~/Contents/customstyles.css" rel="stylesheet" />
+
+    <title>@ViewBag.Title</title>
+   
+
+</head>
+<body>
+    <script>
+
+        $(document).ready(function () {
+
+        });
+    </script>
+   
+     <div>
+        <nav class="navbar navbar-inverse navbar-fixed-top  custom_bkg_color" role="navigation" >
+
+            <div class="nav-hearder">
+
+                <a class="navbar-brand" href="/Home/Index">SAVVY</a>
+            </div>
+            <div>
+
+                <ul class="nav navbar-nav" >
+                    <li><a href="/Home/Index">HOME</a></li>  
+                    <li class="dropdown">
+                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">UFONE<b class="caret"></b></a>
+                       <ul class="dropdown-menu">
+                       <li><a href="~/Ufone/Calls">CALLS</a></li>
+                       <li><a href="~/Ufone/SMS">SMS</a></li>
+                       <li><a href="~/Ufone/Internet">GPRS</a></li>
+                       <li class="divider"></li>
+                       <li><a href="~/Ufone/Bundles">HYBRID</a></li>
+                       <li><a href="~/Ufone/International">INTERNATIONAL</a></li>
+		               </ul>
+                     </li> 
+                    <li class="dropdown">
+                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">MOBILINK<b class="caret"></b></a>
+                       <ul class="dropdown-menu">
+                       <li><a href="~/Mobilink/Calls">CALLS</a></li>
+                       <li><a href="~/Mobilink/SMS">SMS</a></li>
+                       <li><a href="~/Mobilink/Internet">GPRS</a></li>
+                       <li class="divider"></li>
+                       <li><a href="~/Mobilink/Bundles">HYBRID</a></li>
+                       <li><a href="~/Mobilink/International">INTERNATIONAL</a></li>
+		               </ul>
+                     </li>    
+                    <li class="dropdown">
+                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">WARID<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                       <li><a href="~/Warid/Calls">CALLS</a></li>
+                       <li><a href="~/Warid/SMS">SMS</a></li>
+                       <li><a href="~/Warid/Internet">GPRS</a></li>
+                       <li class="divider"></li>
+                       <li><a href="~/Warid/Bundles">HYBRID</a></li>
+                       <li><a href="~/Warid/International">INTERNATIONAL</a></li>
+		               </ul>
+                     </li>  
+                    
+                    <li class="dropdown">
+                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">ZONG<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                       <li><a href="~/Zong/Calls">CALLS</a></li>
+                       <li><a href="~/Zong/SMS">SMS</a></li>
+                       <li><a href="~/Zong/Internet">GPRS</a></li>
+                       <li class="divider"></li>
+                       <li><a href="~/Zong/Bundles">HYBRID</a></li>
+                       <li><a href="~/Zong/International">INTERNATIONAL</a></li>
+		               </ul>
+                     </li>       
+                    
+                    <li class="dropdown">
+                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">TELENOR<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                       <li><a href="~/Telenor/Calls">CALLS</a></li>
+                       <li><a href="~/Telenor/SMS">SMS</a></li>
+                       <li><a href="~/Telenor/Internet">GPRS</a></li>
+                       <li class="divider"></li>
+                       <li><a href="~/Telenor/Bundles">HYBRID</a></li>
+                       <li><a href="~/Telenor/International">INTERNATIONAL</a></li>
+		               </ul>
+                     </li>    
+                </ul>
+
+            </div>
+        </nav>
+         </div>
+        <div class="jumbotron custom_bkg_color_whole ">
+            <div class="row">
+                <div class="col-md-3"></div>  
+                    @RenderBody()
+                </div>
+            <footer class="modal-footer">COPY RIGHT 2016</footer>
+        </div>
+
+</body>
+</html>

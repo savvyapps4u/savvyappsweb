@@ -1,0 +1,51 @@
+﻿@model SavyMobileSS.Models.Admin
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="~/Scripts/jqueryfile.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <link href="~/Contents/bootstrap.css" rel="stylesheet" />
+    <link href="~/Contents/customstyles.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    
+<div class="col-xs-12 make_me_center" style="background-image:url('Images/img-bkg-main.jpg')">
+    <div class="col-md-offset-4 col-md-4">    
+    <div>
+        <div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <h2 id="mainHead" class="text-center">LOGIN TO VIEW SAVVY </h2>
+        </div>
+        <form class="text-center" method="post" action="/Home/ValidateUser">
+           
+            <div class="form-group" >
+                @Html.TextBoxFor(x => x.Username, new {@class="form-control input-lg",@required="required",placeholder="Email",Type="Email"})
+            </div>
+            <div class="form-group">
+                @Html.TextBoxFor(x => x.Password, new {@class="form-control input-lg",@required="required",placeholder="Password",Type="Password"})
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-lg btn-block">Sign In</button>
+
+            </div>
+               
+        </form>
+
+    </div>
+   </div>
+</div>
+
+    
+</body>        
+
+</html>
